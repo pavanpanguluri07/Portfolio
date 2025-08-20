@@ -4,12 +4,13 @@ export const basics = {
   location: 'United States · Open to Remote',
   phone: '+1 913-636-8949',
   email: 'pavanpanguluri00@gmail.com',
-  summary: '5+ years designing and deploying scalable web apps & microservices with Java, Spring Boot, React, AWS, Docker, and CI/CD. Known for cutting latency and speeding delivery with automation.',
+  summary:
+    '5+ years designing and deploying scalable web apps & microservices with Java, Spring Boot, React, AWS, Docker, and CI/CD. Known for cutting latency and speeding delivery with automation.',
   links: {
     email: 'mailto:pavanpanguluri00@gmail.com',
-    linkedin: 'www.linkedin.com/in/venkatapavanpanguluri07',
-    github: 'https://github.com/',
-    resume: '/Resume_Venkata_Pavan_Panguluri.docx'
+    linkedin: 'https://www.linkedin.com/in/venkatapavanpanguluri07', // ✅ Fixed: added https://
+    github: 'https://github.com/pavanpanguluri07', // put your GitHub username
+    resume: '/Resume_Venkata_Pavan_Panguluri.docx' // place file in public/ folder
   }
 }
 
@@ -62,19 +63,28 @@ export const projects = [
     name: 'User Analytics Microservice',
     desc: 'Java + Spring Boot service deployed on AWS (EC2/RDS) to monitor user behavior. Secured with OAuth2/JWT via API Gateway.',
     stack: ['Java', 'Spring Boot', 'AWS EC2/RDS', 'OAuth2', 'JWT', 'API Gateway'],
-    links: { demo: '#', code: '#' }
+    links: {
+      demo: '#',
+      code: '#'
+    }
   },
   {
     name: 'Task Management Platform',
     desc: 'Realtime collaboration with WebSocket notifications and REST APIs. Docker Compose for consistent, scalable runtime.',
     stack: ['Java', 'Spring Boot', 'WebSockets', 'Docker Compose', 'React'],
-    links: { demo: '#', code: '#' }
+    links: {
+      demo: '#',
+      code: '#'
+    }
   },
   {
     name: 'Expense Tracker App',
-    desc: 'Full‑stack personal finance tracker with Node.js, React, and MongoDB. Auth via JWT and CRUD APIs.',
+    desc: 'Full-stack personal finance tracker with Node.js, React, and MongoDB. Auth via JWT and CRUD APIs.',
     stack: ['Node.js', 'React', 'MongoDB', 'JWT'],
-    links: { demo: '#', code: '#' }
+    links: {
+      demo: '#',
+      code: '#'
+    }
   }
 ]
 
