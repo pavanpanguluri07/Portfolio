@@ -1,0 +1,18 @@
+export const meta = {
+  title: 'How I Cut P95 Latency by ~25% Across Microservices',
+  date: '2024-11-10'
+}
+
+# How I Cut P95 Latency by ~25% Across Microservices
+
+**Stack:** Java, Spring Boot, AWS RDS, Redis, Grafana
+
+**TL;DR:** Indexed hot queries, added request caching, trimmed payloads, and introduced async processing for heavy paths.
+
+## Steps
+1. Instrumented with Micrometer + Grafana to find hot spots.
+2. Added DB indexes & analyzed slow queries.
+3. Caching layer on idempotent reads.
+4. Split heavy synchronous flow into async job.
+
+**Result:** ~25% improvement in P95 latency and fewer timeouts during traffic spikes.

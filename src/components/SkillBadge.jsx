@@ -1,0 +1,1 @@
+export default function SkillBadge({ label }) { return <span className='badge'>{label}</span> }

@@ -1,0 +1,1 @@
+export default function Footer({ name }) { return (<footer className='py-10 text-center text-text-muted'>© {new Date().getFullYear()} {name}</footer>) }

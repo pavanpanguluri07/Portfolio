@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { @apply bg-bg text-text antialiased; }
+
+.container-base { @apply max-w-6xl mx-auto px-4; }
+.section { @apply py-20; }
+.card { @apply bg-bg-card/90 border border-white/5 rounded-2xl p-6 shadow-soft; }
+.badge { @apply inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-sm text-text/90; }
+.link { @apply text-brand hover:underline underline-offset-4; }
+
+.card-gradient { position: relative; }
+.card-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(96,165,250,.6), rgba(147,197,253,.2), rgba(96,165,250,.6));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *)) { @apply bg-black/30 px-1.5 py-0.5 rounded; }
+
+/* Fancy bits */
+@keyframes shine { 0% { background-position: 0% 50% } 100% { background-position: 200% 50% } }
+@keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+
+.section + .section { border-top: 1px solid rgba(255,255,255,.06); }
+.perspective-1000 { perspective: 1000px; }
